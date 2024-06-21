@@ -1,30 +1,24 @@
 /*
- * File: 9-print_comb.c
+ * File: 2-print_alphabet.c
  * Auth: Brennan D Baraban
  */
 
 #include <stdio.h>
 
 /**
- * main - Prints all possible combinations of single-digit numbers.
+ * main - Prints the alphabet in lowercase.
  *
  * Return: Always 0.
  */
 int main(void)
 {
-       int num;
+    char letter;
 
-	for (num = 0; num <= 9; num++)
-	{
-		putchar((num % 10) + '0');
-		if (num == 9)
-			continue;
-		
-		putchar(',');
-		putchar(' ');
-	}
+    for (letter = 'a'; letter <= 'z'; letter++)
+        putchar(letter);
 
-	putchar('\n');
+    putchar('\n');
 
-	return (0);
+    return (0);
 }
+
