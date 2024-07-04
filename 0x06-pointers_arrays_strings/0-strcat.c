@@ -1,21 +1,26 @@
-#include "holberton.h"
-
+#include "main.h"
 /**
- * _strcat - a function that concatenates two strings.
- * @dest: an input string
- * @src: an input string
- * Return: A pointer to the resulting string
+ * _strcmp - compare 2 string
+ * @s1:string
+ * @s2:strmp
+ * Return:int
+ * Bwave/ Bright
  */
-char *_strcat(char *dest, char *src)
+int _strcmp(char *s1, char *s2)
 {
-	char *temp = dest;
+	while (((*s1 != '\0') && (*s2 != '\0')) && (*s1 == *s2))
+	{
+		s1++;
+		s2++;
+	}
 
-	while (*dest)
-		dest++;
+	if (*s1 == *s2)
+	{
+		return (0);
+	}
 
-	while (*src)
-		*dest++ = *src++;
-
-	*dest = '\0';
-	return (temp);
+	else
+	{
+		return (*s1 - *s2);
+	}
 }
